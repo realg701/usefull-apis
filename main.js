@@ -29,3 +29,14 @@ xhr.onreadystatechange = function () {
 
 xhr.open("GET", endpoint, true);
 xhr.send();
+
+const fetchApi = async () => {
+  const response = await fetch(
+    `https://api.linkedin.com/v2/people/(id:{abdul-haseeb-qadir-6283a9275})`
+  );
+  const data = response.json();
+
+  console.log(data, response);
+};
+
+// fetchApi();
